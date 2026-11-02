@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Gift Edafe | Chief Executive Officer | Civil Engineer | Surveyor | QA/QC Professional</title>
-  <meta name="description" content="Official professional profile of Gift Edafe, Chief Executive Officer at Jiro-BEACONS Engineering Nigeria Limited.">
+  <title>Projects &amp; Network | Gift Edafe</title>
+  <meta name="description" content="Selected project experience and professional network of Gift Edafe, CEO of Jiro-BEACONS Engineering Nigeria Limited.">
   <meta name="theme-color" content="#121212">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,24 +21,21 @@
       --wine: #2B0714;
       --wine-border: #4A1225;
       --border: #333333;
-      --container: 480px;
+      --container: 860px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
 
-    html, body {
+    body {
       min-height: 100vh;
       background: var(--bg-dark);
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', sans-serif;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    body {
+      padding: 24px 16px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 16px;
     }
 
     .site-wrapper {
@@ -46,49 +43,43 @@
       background: var(--card-bg);
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
       border: 1px solid var(--border);
-      display: flex;
-      flex-direction: column;
     }
 
-    /* FLOATING HEADER */
+    /* TOP HEADER */
     .top-header {
-      position: absolute;
-      top: 24px;
-      left: 20px;
-      right: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 14px 20px;
-      background: rgba(173, 216, 230, 0.85);
+      padding: 24px 30px;
+      background: rgba(26, 26, 26, 0.95);
       backdrop-filter: blur(10px);
-      border-radius: 12px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
       z-index: 100;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     }
 
-    .brand-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
+    .back-btn {
+      color: var(--text-main);
       font-weight: 700;
-      color: #000000;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
     }
 
-    .brand-dot {
-      width: 8px;
-      height: 8px;
-      background: var(--wine);
-      border-radius: 50%;
+    .back-btn:hover {
+      color: var(--text-muted);
     }
 
     .menu-icon {
-      width: 24px;
-      height: 16px;
+      width: 28px;
+      height: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -98,15 +89,15 @@
     .menu-icon span {
       display: block;
       height: 2.5px;
-      background: #000000;
+      background: var(--text-main);
       border-radius: 2px;
     }
 
     /* DROPDOWN MENU */
     .dropdown-menu {
       position: absolute;
-      top: 65px;
-      right: 0;
+      top: 75px;
+      right: 25px;
       background: #222222;
       border: 1px solid var(--border);
       border-radius: 12px;
@@ -141,121 +132,113 @@
       padding-left: 24px;
     }
 
-    /* FULL-BLEED HERO SECTION */
-    .hero-section {
-      position: relative;
-      height: 620px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: 90px 20px 24px 20px;
-      background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(18,18,18,0.3) 50%, rgba(18,18,18,0.95) 90%), url('images/pr.jpg') center/cover no-repeat;
+    /* CONTENT SECTIONS */
+    .content-section {
+      padding: 40px 30px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .hero-top-text {
-      text-align: center;
-      margin-top: 10px;
-    }
-
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--text-main);
-      line-height: 1.15;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-
-    .hero-bottom-content {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .hero-roles {
-      font-size: 13.5px;
-      font-weight: 500;
-      color: #E2E8F0;
-      line-height: 1.5;
-      text-shadow: 0 1px 5px rgba(0,0,0,0.8);
-    }
-
-    .hero-btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      background: #ADD8E6;
-      color: #000000;
-      font-weight: 700;
-      font-size: 14px;
-      padding: 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-    }
-
-    .hero-btn:hover {
-      background: #90CDF4;
-    }
-
-    /* BODY DETAILS */
-    .content-body {
-      padding: 30px 24px;
-      background: var(--card-bg);
+    .content-section:last-of-type {
+      border-bottom: none;
     }
 
     .section-title {
       font-family: 'Playfair Display', serif;
-      font-size: 22px;
+      font-size: 26px;
       font-weight: 700;
-      margin-bottom: 12px;
+      margin-bottom: 24px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
     }
 
     .section-title::before {
       content: "";
-      width: 5px;
-      height: 20px;
+      width: 6px;
+      height: 24px;
       background: var(--wine);
       border-radius: 3px;
     }
 
-    .intro-text {
-      font-size: 14.5px;
+    p {
       color: var(--text-muted);
-      line-height: 1.6;
-      margin-bottom: 24px;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 16px;
     }
 
-    .action-row {
-      display: flex;
-      gap: 10px;
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
     }
 
-    .btn-outline {
-      flex: 1;
-      padding: 12px 16px;
-      background: transparent;
+    .project-card {
+      background: #222222;
       border: 1px solid var(--border);
-      color: var(--text-main);
-      font-weight: 600;
-      font-size: 12px;
+      padding: 26px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .project-card:hover {
+      border-color: var(--wine);
+      transform: translateY(-2px);
+    }
+
+    .project-location {
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      border-radius: 10px;
-      text-align: center;
-      cursor: pointer;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
+      margin-bottom: 6px;
     }
 
-    .btn-outline:hover {
-      border-color: var(--wine);
-      background: rgba(43, 7, 20, 0.2);
+    .project-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+
+    .project-contribution {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .network-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 15px;
+    }
+
+    .network-list li {
+      background: #222222;
+      border: 1px solid var(--border);
+      padding: 16px 20px;
+      border-radius: 12px;
+      font-size: 14px;
+      color: var(--text-main);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-weight: 600;
+    }
+
+    .network-list li::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      background: var(--wine);
+      border-radius: 50%;
+      margin-top: 7px;
     }
 
     /* FOOTER */
@@ -263,24 +246,36 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 24px;
+      padding: 24px 30px;
       border-top: 1px solid var(--border);
       background: #161616;
+      flex-wrap: wrap;
+      gap: 16px;
     }
 
-    .footer-text {
-      font-size: 11.5px;
+    .footer-col h4 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       color: var(--text-muted);
+      margin-bottom: 4px;
     }
 
-    .social-links {
+    .footer-col p {
+      font-size: 14px;
+      color: var(--text-main);
+      font-weight: 600;
+      margin-bottom: 0;
+    }
+
+    .footer-social {
       display: flex;
-      gap: 10px;
+      gap: 12px;
     }
 
     .social-icon {
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: #222222;
       border: 1px solid var(--border);
@@ -298,123 +293,24 @@
     }
 
     .social-icon svg {
-      width: 15px;
-      height: 15px;
+      width: 16px;
+      height: 16px;
       fill: currentColor;
     }
 
-    /* MODAL POPUP */
-    .modal-overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.8);
-      backdrop-filter: blur(5px);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      padding: 16px;
-    }
-
-    .modal-overlay.open {
-      display: flex;
-    }
-
-    .modal-box {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-top: 4px solid var(--wine);
-      border-radius: 20px;
-      padding: 30px;
+    .copyright {
       width: 100%;
-      max-width: 420px;
-      position: relative;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-    }
-
-    .modal-box h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      margin-bottom: 16px;
-    }
-
-    .close-modal {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      background: none;
-      border: none;
-      font-size: 20px;
-      color: var(--text-muted);
-      cursor: pointer;
-    }
-
-    .form-group {
-      margin-bottom: 14px;
-    }
-
-    .form-group label {
-      display: block;
-      font-size: 11px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.8px;
-      color: var(--text-muted);
-      margin-bottom: 6px;
-    }
-
-    .form-group input, .form-group textarea {
-      width: 100%;
-      padding: 11px 14px;
-      background: #222222;
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      color: var(--text-main);
-      font-family: inherit;
-      font-size: 14px;
-      outline: none;
-    }
-
-    .form-group input:focus, .form-group textarea:focus {
-      border-color: var(--wine);
-    }
-
-    .form-group textarea {
-      height: 85px;
-      resize: vertical;
-    }
-
-    .btn-send {
-      width: 100%;
-      background: var(--text-main);
-      color: var(--bg-dark);
-      border: none;
-      border-radius: 10px;
-      padding: 13px;
-      font-weight: 700;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      cursor: pointer;
-      margin-top: 8px;
-    }
-
-    .success-msg {
-      display: none;
       text-align: center;
-      padding: 24px 0;
-    }
-
-    .success-msg h4 {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      color: var(--text-main);
-      margin-bottom: 6px;
-    }
-
-    .success-msg p {
-      font-size: 13.5px;
+      font-size: 12px;
       color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      padding-top: 16px;
+      margin-top: 10px;
+    }
+
+    @media(max-width: 991px) {
+      .projects-grid, .network-list { grid-template-columns: 1fr; }
+      .footer-bar { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -423,100 +319,117 @@
 
   <div class="site-wrapper">
     
-    <!-- HERO SECTION WITH FLOATING HEADER -->
-    <section class="hero-section">
-      <!-- FLOATING HEADER -->
-      <header class="top-header" style="position: relative; top: 0; left: 0; right: 0; margin-bottom: auto;">
-        <div class="brand-title">
-          <span class="brand-dot"></span> Gift Edafe
-        </div>
-        <div style="position: relative;">
-          <div class="menu-icon" id="menuToggle" title="Open Menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <!-- DROPDOWN MENU -->
-          <nav class="dropdown-menu" id="dropdownMenu">
-            <a href="resume.html#about">Who I Am &amp; What I Do</a>
-            <a href="projects.html">Projects</a>
-            <a href="resume.html#expertise">Areas of Professional Expertise</a>
-          </nav>
-        </div>
-      </header>
-
-      <div class="hero-top-text">
-        <h1 class="hero-title">Gift Edafe</h1>
+    <!-- TOP NAVBAR -->
+    <header class="top-header">
+      <a class="back-btn" href="index.html">← Back</a>
+      <div class="menu-icon" id="menuToggle" title="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
 
-      <div class="hero-bottom-content">
-        <div class="hero-roles">Chief Executive Officer<br>Civil Engineer / Surveyor / QA/QC Professional</div>
-        <a href="projects.html" class="hero-btn">View My Work</a>
+      <!-- DROPDOWN MENU -->
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="resume.html#about">Who I Am &amp; What I Do</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html#expertise">Areas of Professional Expertise</a>
+      </nav>
+    </header>
+
+    <!-- SELECTED PROJECT EXPERIENCE -->
+    <section class="content-section">
+      <div class="section-title">Selected Project Experience</div>
+      <p style="margin-bottom: 24px;">A record of engineering leadership, project exposure and delivery capability across critical infrastructure sectors.</p>
+      
+      <div class="projects-grid">
+        <div class="project-card">
+          <div>
+            <div class="project-location">Nigeria</div>
+            <h3>40-Inch AKK Natural Gas Pipeline</h3>
+            <p class="project-contribution"><strong>Contribution:</strong> QA/QC and engineering quality assurance.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-location">Delta State</div>
+            <h3>132/33kV Substation Expansion</h3>
+            <p class="project-contribution"><strong>Contribution:</strong> Digital QA/QC oversight and digital handover.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-location">Delta State</div>
+            <h3>Battery Energy Storage System (BESS)</h3>
+            <p class="project-contribution"><strong>Contribution:</strong> Engineering delivery support and technical assurance.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-location">Lagos &amp; Abuja</div>
+            <h3>Real Estate &amp; As-Built Survey Projects</h3>
+            <p class="project-contribution"><strong>Contribution:</strong> Construction support, surveying and digital engineering.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-location">FCT</div>
+            <h3>Abuja Water Pipeline</h3>
+            <p class="project-contribution"><strong>Contribution:</strong> Pipeline infrastructure and surveying support.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-location">Sokoto State</div>
+            <h3>Goronyo Dam</h3>
+            <p class="project-contribution"><strong>Contribution:</strong> Engineering surveying and QA/QC compliance.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- BODY DETAILS -->
-    <div class="content-body">
-      <div class="section-title">Hello</div>
-      <p class="intro-text">
-        I am Gift Edafe, a civil engineer and surveyor leading Jiro-BEACONS Engineering Nigeria Limited with a vision for advanced infrastructure delivery, robust QA/QC compliance, and intelligent Digital Engineering Packages.
-      </p>
-
-      <div class="action-row">
-        <a href="#" class="btn-outline" id="openModal">Work With Me</a>
-        <a href="resume.html#credentials" class="btn-outline">Credentials</a>
-      </div>
-    </div>
+    <!-- PROFESSIONAL NETWORK & COLLABORATION -->
+    <section class="content-section">
+      <div class="section-title">Professional Network &amp; Collaboration</div>
+      <p style="margin-bottom: 18px;">I welcome professional engagement with:</p>
+      <ul class="network-list">
+        <li>EPC contractors and engineering companies</li>
+        <li>Infrastructure developers and project owners</li>
+        <li>Energy, oil and gas operators</li>
+        <li>Architects, engineers, surveyors and construction professionals</li>
+        <li>Digital engineering and technology providers</li>
+        <li>Asset owners and facility management organisations</li>
+        <li>International engineering and infrastructure partners</li>
+      </ul>
+    </section>
 
     <!-- FOOTER -->
     <footer class="footer-bar">
-      <div class="footer-text">Lagos &amp; Abuja, Nigeria</div>
-      <div class="social-links">
-        <a href="https://jirobeacons.com" target="_blank" rel="noopener" class="social-icon" title="Website">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-        </a>
+      <div>
+        <h4>Call</h4>
+        <p>+234 903 410 9965</p>
+      </div>
+      <div>
+        <h4>Write</h4>
+        <p>giftedafe@jirobeacons.com</p>
+      </div>
+      <div class="footer-social">
         <a href="https://www.linkedin.com/in/gift-edafe-135235135" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
           <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2v-8.37H6.46M7.83 6.42c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63-.73-1.63-1.63-1.63Z"/></svg>
         </a>
-        <a href="mailto:giftedafe@jirobeacons.com" class="social-icon" title="Email">
-          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <a href="https://jirobeacons.com" target="_blank" rel="noopener" class="social-icon" title="Website">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
         </a>
+      </div>
+      <div class="copyright">
+        © <span id="currentYear">2026</span> by Gift Edafe. Powered and secured by Jiro-BEACONS.
       </div>
     </footer>
 
-  </div>
-
-  <!-- MODAL -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal-box">
-      <button class="close-modal" id="closeModal">&times;</button>
-      <div id="formContainer">
-        <h3>Get in Touch</h3>
-        <form id="contactForm">
-          <div class="form-group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="firstName" required>
-          </div>
-          <div class="form-group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="lastName" required>
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-          </div>
-          <button type="submit" class="btn-send">Send</button>
-        </form>
-      </div>
-      <div class="success-msg" id="successMsg">
-        <h4>Message Sent Successfully!</h4>
-        <p>Thank you for reaching out. Gift Edafe will get back to you shortly.</p>
-      </div>
-    </div>
   </div>
 
   <script>
@@ -529,32 +442,7 @@
     window.addEventListener('click', () => {
       dropdownMenu.classList.remove('show');
     });
-
-    const openModal = document.getElementById('openModal');
-    const closeModal = document.getElementById('closeModal');
-    const modalOverlay = document.getElementById('modalOverlay');
-    const contactForm = document.getElementById('contactForm');
-    const formContainer = document.getElementById('formContainer');
-    const successMsg = document.getElementById('successMsg');
-
-    openModal.addEventListener('click', (e) => {
-      e.preventDefault();
-      formContainer.style.display = 'block';
-      successMsg.style.display = 'none';
-      contactForm.reset();
-      modalOverlay.classList.add('open');
-    });
-    closeModal.addEventListener('click', () => {
-      modalOverlay.classList.remove('open');
-    });
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) modalOverlay.classList.remove('open');
-    });
-    contactForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      formContainer.style.display = 'none';
-      successMsg.style.display = 'block';
-    });
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
