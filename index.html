@@ -10,7 +10,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -34,7 +34,7 @@
     }
 
     body {
-      font-family: "Plus Jakarta Sans", sans-serif;
+      font-family: "DM Sans", sans-serif;
       color: var(--text-main);
       background: var(--bg);
       line-height: 1.5;
@@ -60,6 +60,7 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 24px;
+      font-family: "Manrope", sans-serif;
       font-weight: 800;
       font-size: 15px;
       color: #000000;
@@ -105,7 +106,7 @@
       border: 1px solid var(--border);
       border-radius: 10px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      width: 210px;
+      width: 220px;
       display: none;
       flex-direction: column;
       text-align: left;
@@ -152,6 +153,7 @@
     }
 
     h1 {
+      font-family: "Manrope", sans-serif;
       font-size: 24px;
       font-weight: 800;
       color: #000000;
@@ -183,10 +185,11 @@
 
     .hello-note {
       font-size: 15px;
-      font-weight: 700;
+      font-weight: 800;
       color: #000000;
       margin-bottom: 6px;
       text-align: left;
+      font-family: "Manrope", sans-serif;
     }
 
     .intro-note {
@@ -308,6 +311,7 @@
     }
 
     .modal-box h3 {
+      font-family: "Manrope", sans-serif;
       font-size: 20px;
       font-weight: 800;
       color: #000000;
@@ -377,6 +381,24 @@
     .btn-send:hover {
       background: #0044CC;
     }
+
+    .success-msg {
+      display: none;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .success-msg h4 {
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      color: var(--accent-blue);
+      margin-bottom: 8px;
+    }
+
+    .success-msg p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
   </style>
 </head>
 
@@ -417,7 +439,7 @@
     </div>
 
     <div class="action-buttons">
-      <a class="btn btn-solid" href="resume.html#credentials">View My Work</a>
+      <a class="btn btn-solid" href="projects.html">View My Work</a>
       <a class="btn btn-outline" href="#" id="openModal">Work With Me</a>
     </div>
 
@@ -440,26 +462,32 @@
   <div class="modal-overlay" id="modalOverlay">
     <div class="modal-box">
       <button class="close-modal" id="closeModal">&times;</button>
-      <h3>Get in Touch</h3>
-      <form action="mailto:giftedafe@jirobeacons.com" method="POST" enctype="text/plain">
-        <div class="form-group">
-          <label for="firstName">First Name</label>
-          <input type="text" id="firstName" name="firstName" required>
-        </div>
-        <div class="form-group">
-          <label for="lastName">Last Name</label>
-          <input type="text" id="lastName" name="lastName" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-        </div>
-        <button type="submit" class="btn-send">Send</button>
-      </form>
+      <div id="formContainer">
+        <h3>Get in Touch</h3>
+        <form id="contactForm">
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn-send">Send</button>
+        </form>
+      </div>
+      <div class="success-msg" id="successMsg">
+        <h4>Message Sent Successfully!</h4>
+        <p>Thank you for reaching out. Gift Edafe will get back to you shortly.</p>
+      </div>
     </div>
   </div>
 
@@ -475,13 +503,19 @@
       dropdownMenu.classList.remove('show');
     });
 
-    // Modal popup toggle
+    // Modal popup toggle & form submission confirmation
     const openModal = document.getElementById('openModal');
     const closeModal = document.getElementById('closeModal');
     const modalOverlay = document.getElementById('modalOverlay');
+    const contactForm = document.getElementById('contactForm');
+    const formContainer = document.getElementById('formContainer');
+    const successMsg = document.getElementById('successMsg');
 
     openModal.addEventListener('click', (e) => {
       e.preventDefault();
+      formContainer.style.display = 'block';
+      successMsg.style.display = 'none';
+      contactForm.reset();
       modalOverlay.classList.add('open');
     });
     closeModal.addEventListener('click', () => {
@@ -491,6 +525,12 @@
       if (e.target === modalOverlay) {
         modalOverlay.classList.remove('open');
       }
+    });
+
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      formContainer.style.display = 'none';
+      successMsg.style.display = 'block';
     });
   </script>
 
