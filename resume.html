@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Resume &amp; Expertise | Gift Edafe</title>
+  <meta name="description" content="Professional background, areas of expertise, leadership and credentials of Gift Edafe, CEO of Jiro-BEACONS Engineering Nigeria Limited.">
+  <meta name="theme-color" content="#0B0E14">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0B0E14;
+      --surface: #131822;
+      --surface-card: #1A2130;
+      --border: rgba(212, 175, 55, 0.18);
+      --border-light: rgba(255, 255, 255, 0.08);
+      --text: #E2E8F0;
+      --muted: #94A3B8;
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --container: 1000px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: min(var(--container), 100%);
+      margin: 0 auto;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .back-btn {
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .nav-tabs a {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-tabs a:hover, .nav-tabs a.active {
+      color: var(--gold);
+    }
+
+    .section-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 45px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2::before {
+      content: "";
+      width: 16px;
+      height: 3px;
+      background: var(--gold);
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+
+    p:last-child { margin-bottom: 0; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .expert-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-light);
+      padding: 24px;
+      border-radius: 8px;
+    }
+
+    .expert-card h3 {
+      font-size: 17px;
+      color: #FFFFFF;
+      margin-bottom: 10px;
+      font-family: "Manrope", sans-serif;
+    }
+
+    .expert-card p {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .cred-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .cred-list li {
+      background: var(--surface-card);
+      border: 1px solid var(--border-light);
+      padding: 14px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: #FFFFFF;
+      font-size: 15px;
+    }
+
+    .leadership-box {
+      background: linear-gradient(135deg, #182232, #0F172A);
+      border: 1px solid var(--border);
+      padding: 45px;
+      border-radius: 16px;
+    }
+
+    .leadership-box h3 {
+      color: var(--gold);
+      font-size: 20px;
+      margin-bottom: 15px;
+      font-family: "Manrope", sans-serif;
+    }
+
+    .leadership-link {
+      display: inline-block;
+      margin-top: 20px;
+      color: var(--gold);
+      font-weight: 700;
+      word-break: break-all;
+    }
+
+    @media(max-width: 768px) {
+      .grid-2, .cred-list { grid-template-columns: 1fr; }
+      .section-box, .leadership-box { padding: 30px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="nav-bar">
+      <a class="back-btn" href="index.html">← Back to Profile</a>
+      <ul class="nav-tabs">
+        <li><a class="active" href="resume.html">Resume</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </div>
+
+    <!-- ABOUT ME -->
+    <div class="section-box" id="about">
+      <h2>ABOUT ME</h2>
+      <p>
+        I am Gift Edafe, a civil engineer and surveyor with professional experience across engineering, geospatial practice, construction management, quality assurance and integrated project delivery. I serve as Chief Executive Officer of Jiro-BEACONS Engineering Nigeria Limited.
+      </p>
+      <p>
+        My work focuses on leading Architecture, Engineering and Construction (AEC) teams through project planning, site mobilisation, construction execution and technical assurance. I coordinate professional expertise, support site operations, oversee practical construction activities and promote compliance with engineering standards and project requirements.
+      </p>
+      <p>
+        Through Jiro-BEACONS, I lead an integrated approach to infrastructure delivery, bringing together surveying, architecture, engineering, quantity surveying, construction and project management capabilities.
+      </p>
+      <p>
+        I believe successful infrastructure delivery must extend beyond physical completion. It requires sound engineering, effective site execution, verified quality and proper commissioning. It must also leave behind a complete Digital Engineering Package (DEP) containing structured technical records, as-built information, geospatial data and intelligent asset information to support future operations and lifecycle management.
+      </p>
+      <p>
+        My vision is to advance a higher standard of infrastructure delivery, combining engineering excellence, practical construction capability and intelligent information management to create lasting value for clients, asset owners and the built environment.
+      </p>
+    </div>
+
+    <!-- AREAS OF PROFESSIONAL EXPERTISE -->
+    <div class="section-box" id="expertise">
+      <h2>AREAS OF PROFESSIONAL EXPERTISE</h2>
+      <div class="grid-2">
+        <div class="expert-card">
+          <h3>Engineering &amp; Infrastructure Delivery</h3>
+          <p>Integrated AEC coordination, engineering support, construction execution and project delivery.</p>
+        </div>
+        <div class="expert-card">
+          <h3>Surveying &amp; Geospatial Engineering</h3>
+          <p>Engineering surveys, geospatial data acquisition, site measurement, spatial information and as-built surveys.</p>
+        </div>
+        <div class="expert-card">
+          <h3>QA/QC &amp; Technical Assurance</h3>
+          <p>Quality assurance, inspection, testing coordination, compliance monitoring and technical records.</p>
+        </div>
+        <div class="expert-card">
+          <h3>Construction &amp; Project Management</h3>
+          <p>Site mobilisation, construction coordination, multidisciplinary team integration and project monitoring.</p>
+        </div>
+        <div class="expert-card">
+          <h3>Digital Engineering &amp; Asset Information</h3>
+          <p>Digital Engineering Packages (DEP), Scan-to-BIM, digital as-built records, Digital Twin asset information and structured asset registers.</p>
+        </div>
+        <div class="expert-card">
+          <h3>Engineering Information Management</h3>
+          <p>Engineering document control, digital QA/QC records, inspection and test documentation, technical registers and project handover systems.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LEADERSHIP & CORPORATE AFFILIATION -->
+    <div class="leadership-box" id="leadership" style="margin-bottom: 30px;">
+      <h2>LEADERSHIP &amp; CORPORATE AFFILIATION</h2>
+      <h3 style="margin-top: 15px;">Jiro-BEACONS Engineering Nigeria Limited</h3>
+      <p style="color: #FFFFFF; font-weight: 700; margin-bottom: 12px;">Chief Executive Officer</p>
+      <p>
+        I lead Jiro-BEACONS in delivering integrated engineering, surveying, construction support, technical assurance and digital engineering solutions.
+      </p>
+      <p>
+        Our approach brings together multidisciplinary AEC expertise and practical infrastructure delivery, distinguished by our signature Digital Engineering Package (DEP).
+      </p>
+      <p>
+        The DEP extends project delivery beyond physical completion by providing clients with structured digital engineering records, verified QA/QC information, as-built documentation, geospatial records and intelligent asset information for future operations and lifecycle management.
+      </p>
+      <div>
+        <a class="leadership-link" href="https://jirobeacons.com" target="_blank" rel="noopener">
+          Explore the company: https://jirobeacons.com →
+        </a>
+      </div>
+    </div>
+
+    <!-- PROFESSIONAL QUALIFICATIONS & CREDENTIALS -->
+    <div class="section-box" id="credentials">
+      <h2>PROFESSIONAL QUALIFICATIONS &amp; CREDENTIALS</h2>
+      <ul class="cred-list">
+        <li>M.Eng. Civil Engineering</li>
+        <li>B.Eng. Civil Engineering</li>
+        <li>HND / OND Surveying &amp; Geoinformatics</li>
+        <li>COREN Professional Registration</li>
+        <li>SURCON Professional Registration</li>
+        <li>ISO 9001:2015 Quality Management Systems</li>
+        <li>ASNT NDT Level II – UT, MPT and RFI</li>
+      </ul>
+    </div>
+
+  </div>
+
+</body>
+</html>
