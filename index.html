@@ -38,35 +38,45 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 16px;
+      padding: 0;
+      margin: 0;
     }
 
     .site-wrapper {
       width: min(var(--container), 100%);
+      min-height: 100vh;
       background: var(--card-bg);
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
-      border: 1px solid var(--border);
       display: flex;
       flex-direction: column;
+      position: relative;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.6);
+      border-left: 1px solid var(--border);
+      border-right: 1px solid var(--border);
+    }
+
+    /* FULL-BLEED HERO SECTION */
+    .hero-section {
+      position: relative;
+      min-height: 660px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px 20px 32px 20px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(18,18,18,0.15) 35%, rgba(18,18,18,0.96) 88%), url('images/pr.jpg') center/cover no-repeat;
     }
 
     /* FLOATING HEADER */
     .top-header {
-      position: absolute;
-      top: 24px;
-      left: 20px;
-      right: 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 14px 20px;
-      background: rgba(173, 216, 230, 0.88);
+      background: rgba(173, 216, 230, 0.9);
       backdrop-filter: blur(10px);
       border-radius: 12px;
+      position: relative;
       z-index: 100;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     }
 
     .brand-title {
@@ -141,30 +151,23 @@
       padding-left: 24px;
     }
 
-    /* FULL-BLEED HERO SECTION */
-    .hero-section {
-      position: relative;
-      height: 620px;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      padding: 24px 24px 32px 24px;
-      background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(18,18,18,0.4) 40%, rgba(18,18,18,0.96) 88%), url('images/pr.jpg') center/cover no-repeat;
+    .hero-top-content {
+      margin-top: 15px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.1;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.7);
     }
 
     .hero-bottom-content {
       display: flex;
       flex-direction: column;
       gap: 14px;
-    }
-
-    .hero-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 38px;
-      font-weight: 700;
-      color: var(--text-main);
-      line-height: 1.1;
-      text-shadow: 0 2px 12px rgba(0,0,0,0.7);
     }
 
     .hero-roles {
@@ -189,7 +192,6 @@
       text-decoration: none;
       transition: background 0.2s, transform 0.2s;
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-      margin-top: 4px;
     }
 
     .hero-btn:hover {
@@ -200,6 +202,7 @@
     .content-body {
       padding: 30px 24px;
       background: var(--card-bg);
+      border-top: 1px solid var(--border);
     }
 
     .section-title {
@@ -262,6 +265,7 @@
       padding: 20px 24px;
       border-top: 1px solid var(--border);
       background: #161616;
+      margin-top: auto;
     }
 
     .footer-text {
@@ -419,7 +423,7 @@
 
   <div class="site-wrapper">
     
-    <!-- HERO SECTION WITH FLOATING HEADER -->
+    <!-- FULL-BLEED HERO SECTION WITH FLOATING HEADER & TOP NAME -->
     <section class="hero-section">
       <!-- FLOATING HEADER -->
       <header class="top-header">
@@ -441,8 +445,11 @@
         </div>
       </header>
 
-      <div class="hero-bottom-content">
+      <div class="hero-top-content">
         <h1 class="hero-title">Gift Edafe</h1>
+      </div>
+
+      <div class="hero-bottom-content">
         <div class="hero-roles">Chief Executive Officer<br>Civil Engineer / Surveyor / QA/QC Professional</div>
         <a href="projects.html" class="hero-btn">View My Work</a>
       </div>
