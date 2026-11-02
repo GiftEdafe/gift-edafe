@@ -45,6 +45,7 @@
       margin-bottom: 30px;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--border);
+      position: relative;
     }
 
     .back-btn {
@@ -53,6 +54,12 @@
       text-transform: uppercase;
       font-size: 13px;
       letter-spacing: 0.8px;
+    }
+
+    .nav-right-area {
+      display: flex;
+      align-items: center;
+      gap: 20px;
     }
 
     .nav-tabs {
@@ -70,6 +77,60 @@
     }
 
     .nav-tabs a:hover, .nav-tabs a.active {
+      color: var(--accent-blue);
+    }
+
+    .menu-icon {
+      width: 26px;
+      height: 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .menu-icon span {
+      display: block;
+      height: 3px;
+      background: var(--accent-blue);
+      border-radius: 2px;
+    }
+
+    .dropdown-menu {
+      position: absolute;
+      top: 50px;
+      right: 0;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 210px;
+      display: none;
+      flex-direction: column;
+      text-align: left;
+      z-index: 100;
+      overflow: hidden;
+    }
+
+    .dropdown-menu.show {
+      display: flex;
+    }
+
+    .dropdown-menu a {
+      padding: 12px 18px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #000000;
+      border-bottom: 1px solid #F0F0F0;
+      transition: background 0.2s;
+    }
+
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(0, 85, 255, 0.08);
       color: var(--accent-blue);
     }
 
@@ -170,9 +231,66 @@
       word-break: break-all;
     }
 
+    /* WIX TEMPLATE STYLE FOOTER */
+    .site-footer {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 40px;
+      margin-top: 30px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.04);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+
+    .footer-col h3 {
+      font-size: 16px;
+      font-weight: 800;
+      color: #000000;
+      margin-bottom: 8px;
+    }
+
+    .footer-col p {
+      font-size: 14.5px;
+      color: #000000;
+      margin-bottom: 0;
+    }
+
+    .footer-bottom {
+      grid-column: 1 / -1;
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 16px;
+    }
+
+    .footer-social a {
+      font-size: 15px;
+      font-weight: 800;
+      color: #000000;
+      transition: color 0.2s;
+    }
+
+    .footer-social a:hover {
+      color: var(--accent-blue);
+    }
+
+    .copyright {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
     @media(max-width: 768px) {
-      .grid-2, .cred-list { grid-template-columns: 1fr; }
-      .section-box, .leadership-box { padding: 25px 20px; }
+      .grid-2, .cred-list, .site-footer { grid-template-columns: 1fr; }
+      .section-box, .leadership-box, .site-footer { padding: 25px 20px; }
     }
   </style>
 </head>
@@ -182,10 +300,24 @@
   <div class="container">
     <div class="nav-bar">
       <a class="back-btn" href="index.html">← Back</a>
-      <ul class="nav-tabs">
-        <li><a class="active" href="resume.html">Resume</a></li>
-        <li><a href="projects.html">Projects</a></li>
-      </ul>
+      <div class="nav-right-area">
+        <ul class="nav-tabs">
+          <li><a class="active" href="resume.html">Resume</a></li>
+          <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <div class="menu-icon" id="menuToggle" title="Open Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <!-- DROPDOWN MENU -->
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="#about">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="#credentials">Professional Experience</a>
+      </div>
     </div>
 
     <!-- ABOUT ME -->
@@ -274,7 +406,45 @@
       </ul>
     </div>
 
+    <!-- EXACT WIX TEMPLATE STYLE FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-col">
+        <h3>Call</h3>
+        <p>+234 (0) 800 JIRO-BEACONS</p>
+      </div>
+      <div class="footer-col">
+        <h3>Write</h3>
+        <p>giftedafe@jirobeacons.com</p>
+      </div>
+      <div class="footer-bottom">
+        <div>
+          <div style="font-weight: 800; margin-bottom: 6px;">Follow</div>
+          <div class="footer-social">
+            <a href="https://linkedin.com/in/gift-edafe-135235135" target="_blank" rel="noopener">in</a>
+            <a href="https://jirobeacons.com" target="_blank" rel="noopener">JB</a>
+          </div>
+        </div>
+        <div class="copyright">
+          © <span id="currentYear">2026</span> by Gift Edafe. Powered and secured by Jiro-BEACONS.
+        </div>
+      </div>
+    </footer>
+
   </div>
+
+  <script>
+    // Dropdown toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('show');
+    });
+    window.addEventListener('click', () => {
+      dropdownMenu.classList.remove('show');
+    });
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
