@@ -6,34 +6,31 @@
 
   <title>Resume &amp; Expertise | Gift Edafe</title>
   <meta name="description" content="Professional background, areas of expertise, leadership and credentials of Gift Edafe, CEO of Jiro-BEACONS Engineering Nigeria Limited.">
-  <meta name="theme-color" content="#0B0E14">
+  <meta name="theme-color" content="#F4ECE1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0B0E14;
-      --surface: #131822;
-      --surface-card: #1A2130;
-      --border: rgba(212, 175, 55, 0.18);
-      --border-light: rgba(255, 255, 255, 0.08);
-      --text: #E2E8F0;
-      --muted: #94A3B8;
-      --gold: #D4AF37;
-      --gold-light: #F3E5AB;
-      --container: 1000px;
+      --bg: #F4ECE1;
+      --card-bg: #FFFFFF;
+      --text-main: #000000;
+      --text-muted: #555555;
+      --accent-blue: #0055FF;
+      --border: #E5D9CB;
+      --container: 900px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: "DM Sans", sans-serif;
-      color: var(--text);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--text-main);
       background: var(--bg);
-      line-height: 1.7;
-      padding: 40px 20px;
+      line-height: 1.6;
+      padding: 30px 16px;
     }
 
     .container {
@@ -45,67 +42,57 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 30px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
     }
 
     .back-btn {
-      color: var(--gold);
-      font-weight: 700;
+      color: var(--accent-blue);
+      font-weight: 800;
       text-transform: uppercase;
       font-size: 13px;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
     }
 
     .nav-tabs {
       display: flex;
-      gap: 15px;
+      gap: 20px;
       list-style: none;
     }
 
     .nav-tabs a {
-      color: var(--muted);
+      color: var(--text-muted);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
     }
 
     .nav-tabs a:hover, .nav-tabs a.active {
-      color: var(--gold);
+      color: var(--accent-blue);
     }
 
     .section-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--card-bg);
       border-radius: 16px;
-      padding: 45px;
-      margin-bottom: 30px;
+      padding: 40px;
+      margin-bottom: 24px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.04);
     }
 
     h2 {
-      font-family: "Manrope", sans-serif;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 800;
-      color: #FFFFFF;
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    h2::before {
-      content: "";
-      width: 16px;
-      height: 3px;
-      background: var(--gold);
+      color: #000000;
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
     }
 
     p {
-      color: var(--muted);
-      margin-bottom: 20px;
-      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 15px;
     }
 
     p:last-child { margin-bottom: 0; }
@@ -117,21 +104,21 @@
     }
 
     .expert-card {
-      background: var(--surface-card);
-      border: 1px solid var(--border-light);
-      padding: 24px;
-      border-radius: 8px;
+      background: #FAFAFA;
+      border: 1px solid var(--border);
+      padding: 22px;
+      border-radius: 10px;
     }
 
     .expert-card h3 {
-      font-size: 17px;
-      color: #FFFFFF;
-      margin-bottom: 10px;
-      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+      color: #000000;
+      margin-bottom: 8px;
+      font-weight: 700;
     }
 
     .expert-card p {
-      font-size: 14px;
+      font-size: 13.5px;
       margin-bottom: 0;
     }
 
@@ -139,44 +126,53 @@
       list-style: none;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      gap: 12px;
     }
 
     .cred-list li {
-      background: var(--surface-card);
-      border: 1px solid var(--border-light);
+      background: #FAFAFA;
+      border: 1px solid var(--border);
       padding: 14px 18px;
-      border-radius: 6px;
-      font-weight: 600;
-      color: #FFFFFF;
-      font-size: 15px;
+      border-radius: 8px;
+      font-weight: 700;
+      color: #000000;
+      font-size: 14px;
     }
 
     .leadership-box {
-      background: linear-gradient(135deg, #182232, #0F172A);
-      border: 1px solid var(--border);
-      padding: 45px;
+      background: #000000;
+      color: #FFFFFF;
+      padding: 40px;
       border-radius: 16px;
+      margin-bottom: 24px;
+    }
+
+    .leadership-box h2 {
+      color: #FFFFFF;
     }
 
     .leadership-box h3 {
-      color: var(--gold);
-      font-size: 20px;
-      margin-bottom: 15px;
-      font-family: "Manrope", sans-serif;
+      color: var(--accent-blue);
+      font-size: 18px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .leadership-box p {
+      color: #CCCCCC;
     }
 
     .leadership-link {
       display: inline-block;
-      margin-top: 20px;
-      color: var(--gold);
+      margin-top: 16px;
+      color: var(--accent-blue);
       font-weight: 700;
       word-break: break-all;
     }
 
     @media(max-width: 768px) {
       .grid-2, .cred-list { grid-template-columns: 1fr; }
-      .section-box, .leadership-box { padding: 30px 20px; }
+      .section-box, .leadership-box { padding: 25px 20px; }
     }
   </style>
 </head>
@@ -185,7 +181,7 @@
 
   <div class="container">
     <div class="nav-bar">
-      <a class="back-btn" href="index.html">← Back to Profile</a>
+      <a class="back-btn" href="index.html">← Back</a>
       <ul class="nav-tabs">
         <li><a class="active" href="resume.html">Resume</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -194,7 +190,7 @@
 
     <!-- ABOUT ME -->
     <div class="section-box" id="about">
-      <h2>ABOUT ME</h2>
+      <h2>Here's who I am &amp; what I do</h2>
       <p>
         I am Gift Edafe, a civil engineer and surveyor with professional experience across engineering, geospatial practice, construction management, quality assurance and integrated project delivery. I serve as Chief Executive Officer of Jiro-BEACONS Engineering Nigeria Limited.
       </p>
@@ -244,7 +240,7 @@
     </div>
 
     <!-- LEADERSHIP & CORPORATE AFFILIATION -->
-    <div class="leadership-box" id="leadership" style="margin-bottom: 30px;">
+    <div class="leadership-box" id="leadership">
       <h2>LEADERSHIP &amp; CORPORATE AFFILIATION</h2>
       <h3 style="margin-top: 15px;">Jiro-BEACONS Engineering Nigeria Limited</h3>
       <p style="color: #FFFFFF; font-weight: 700; margin-bottom: 12px;">Chief Executive Officer</p>
