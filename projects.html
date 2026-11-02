@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Projects &amp; Network | Gift Edafe</title>
+  <meta name="description" content="Selected project experience and professional network of Gift Edafe, CEO of Jiro-BEACONS Engineering Nigeria Limited.">
+  <meta name="theme-color" content="#0B0E14">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0B0E14;
+      --surface: #131822;
+      --surface-card: #1A2130;
+      --border: rgba(212, 175, 55, 0.18);
+      --border-light: rgba(255, 255, 255, 0.08);
+      --text: #E2E8F0;
+      --muted: #94A3B8;
+      --gold: #D4AF37;
+      --gold-light: #F3E5AB;
+      --container: 1000px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "DM Sans", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: min(var(--container), 100%);
+      margin: 0 auto;
+    }
+
+    .nav-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .back-btn {
+      color: var(--gold);
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .nav-tabs {
+      display: flex;
+      gap: 15px;
+      list-style: none;
+    }
+
+    .nav-tabs a {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .nav-tabs a:hover, .nav-tabs a.active {
+      color: var(--gold);
+    }
+
+    .section-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 45px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-family: "Manrope", sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #FFFFFF;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    h2::before {
+      content: "";
+      width: 16px;
+      height: 3px;
+      background: var(--gold);
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 15px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .project-card {
+      background: var(--surface-card);
+      border: 1px solid var(--border-light);
+      padding: 24px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .project-num {
+      font-family: "Manrope", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .project-card h3 {
+      font-size: 17px;
+      color: #FFFFFF;
+      margin-bottom: 12px;
+      font-family: "Manrope", sans-serif;
+    }
+
+    .project-status {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #0B0E14;
+      background: var(--gold);
+      padding: 4px 10px;
+      border-radius: 3px;
+    }
+
+    .network-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .network-list li {
+      background: var(--surface-card);
+      border: 1px solid var(--border-light);
+      padding: 16px 20px;
+      border-radius: 6px;
+      font-size: 15px;
+      color: #CBD5E1;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .network-list li::before {
+      content: "—";
+      color: var(--gold);
+      font-weight: 800;
+    }
+
+    .connect-box {
+      background: linear-gradient(135deg, #2B0714, #1A040C);
+      border: 1px solid var(--border);
+      padding: 45px;
+      border-radius: 16px;
+    }
+
+    .connect-details {
+      display: grid;
+      gap: 10px;
+      font-size: 15px;
+      color: #CBD5E1;
+      background: rgba(0, 0, 0, 0.3);
+      padding: 25px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 20px;
+    }
+
+    .connect-details strong { color: #FFFFFF; }
+    .connect-details a { color: var(--gold-light); text-decoration: underline; }
+
+    @media(max-width: 991px) {
+      .projects-grid, .network-list { grid-template-columns: 1fr; }
+      .section-box, .connect-box { padding: 30px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="nav-bar">
+      <a class="back-btn" href="index.html">← Back to Profile</a>
+      <ul class="nav-tabs">
+        <li><a href="resume.html">Resume</a></li>
+        <li><a class="active" href="projects.html">Projects</a></li>
+      </ul>
+    </div>
+
+    <!-- SELECTED PROJECT EXPERIENCE -->
+    <div class="section-box">
+      <h2>SELECTED PROJECT EXPERIENCE</h2>
+      
+      <div class="projects-grid" style="margin-top: 25px;">
+        <div class="project-card">
+          <div>
+            <div class="project-num">01</div>
+            <h3>Battery Energy Storage System (BESS) Infrastructure Project</h3>
+            <p><strong>Professional Involvement:</strong> Integrated Engineering Delivery Support, QA/QC Compliance, Technical Documentation and Digital Engineering Package (DEP) Development.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-num">02</div>
+            <h3>132/33kV Substation Expansion Project</h3>
+            <p><strong>Professional Involvement:</strong> Digital QA/QC Oversight, Engineering Document Control, Quality Records Management, Digital As-Built Index and Digital Handover.</p>
+          </div>
+          <span class="project-status">Completed – 9 June 2026</span>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-num">03</div>
+            <h3>Abuja-FCT Real Estate Development Projects</h3>
+            <p><strong>Professional Involvement:</strong> Real Estate As-Built Surveying, Geospatial Data Acquisition, Structural Information Capture, Property Records Assessment and Digital Engineering Documentation.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-num">04</div>
+            <h3>Imo Digital City Computer Village Hub</h3>
+            <p><strong>Professional Involvement:</strong> Digital QA/QC Management, Material Quality Records, Construction Progress Monitoring, Engineering Documentation and Digital Handover Coordination.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-num">05</div>
+            <h3>Real Estate Construction &amp; Digital Engineering Package – Lagos</h3>
+            <p><strong>Professional Involvement:</strong> Construction Delivery Support, QA/QC Coordination, Engineering Documentation and Digital Engineering Package Development.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-num">06</div>
+            <h3>Hotel &amp; Resort Construction Project – Ondo State</h3>
+            <p><strong>Professional Involvement:</strong> Integrated Construction Support, QA/QC Coordination, Engineering Documentation and Digital Project Delivery.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-num">07</div>
+            <h3>Gilmor Goronyo Dam Project</h3>
+            <p><strong>Professional Involvement:</strong> Engineering Surveying, Geospatial Support, Site Measurement and QA/QC Compliance.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-num">08</div>
+            <h3>Abuja Water Pipeline Project – CGC Nigeria Limited (CGCNL)</h3>
+            <p><strong>Professional Involvement:</strong> Pipeline Infrastructure Support, Surveying Coordination and QA/QC Compliance.</p>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-num">09</div>
+            <h3>AKK 40-Inch Natural Gas Pipeline Project</h3>
+            <p><strong>Professional Involvement:</strong> QA/QC Compliance, Quality Assurance and Engineering Quality Documentation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROFESSIONAL NETWORK & COLLABORATION -->
+    <div class="section-box">
+      <h2>PROFESSIONAL NETWORK &amp; COLLABORATION</h2>
+      <p style="margin-bottom: 20px;">I welcome professional engagement with:</p>
+      <ul class="network-list">
+        <li>EPC contractors and engineering companies</li>
+        <li>Infrastructure developers and project owners</li>
+        <li>Energy, oil and gas operators</li>
+        <li>Architects, engineers, surveyors and construction professionals</li>
+        <li>Digital engineering and technology providers</li>
+        <li>Asset owners and facility management organisations</li>
+        <li>International engineering and infrastructure partners</li>
+      </ul>
+    </div>
+
+    <!-- CONNECT -->
+    <div class="connect-box">
+      <h2>CONNECT</h2>
+      <p style="margin-top: 15px; font-size: 17px; color: #E2E8F0;">
+        For professional enquiries, engineering collaboration, project opportunities and strategic partnerships, I welcome meaningful engagement.
+      </p>
+
+      <div class="connect-details">
+        <div><strong>Name:</strong> Gift Edafe</div>
+        <div><strong>Title:</strong> Chief Executive Officer, Jiro-BEACONS Engineering Nigeria Limited</div>
+        <div><strong>Location:</strong> Lagos &amp; Abuja, Nigeria | Global Engagement</div>
+        <div><strong>Company Website:</strong> <a href="https://jirobeacons.com" target="_blank" rel="noopener">https://jirobeacons.com</a></div>
+        <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/gift-edafe-135235135" target="_blank" rel="noopener">linkedin.com/in/gift-edafe-135235135</a></div>
+        <div><strong>Professional Email:</strong> <a href="mailto:giftedafe@jirobeacons.com">giftedafe@jirobeacons.com</a></div>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
