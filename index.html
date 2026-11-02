@@ -6,26 +6,21 @@
 
   <title>Gift Edafe | Chief Executive Officer | Civil Engineer | Surveyor | QA/QC Professional</title>
   <meta name="description" content="Official professional profile of Gift Edafe, Chief Executive Officer at Jiro-BEACONS Engineering Nigeria Limited. Engineering leadership, integrated project delivery, QA/QC, and digital engineering intelligence.">
-  <meta name="theme-color" content="#0B0E14">
+  <meta name="theme-color" content="#F4ECE1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0B0E14;
-      --surface: #131822;
-      --surface-card: #1A2130;
-      --border: rgba(37, 99, 235, 0.25);
-      --border-light: rgba(255, 255, 255, 0.08);
-      --text: #E2E8F0;
-      --muted: #94A3B8;
-      --accent-blue: #2563EB;
-      --accent-blue-hover: #1D4ED8;
-      --gold: #D4AF37;
-      --wine: #2B0714;
-      --container: 720px;
+      --bg: #F4ECE1;
+      --card-bg: #FFFFFF;
+      --text-main: #000000;
+      --text-muted: #555555;
+      --accent-blue: #0055FF;
+      --border: #E5D9CB;
+      --container: 540px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -39,12 +34,12 @@
     }
 
     body {
-      font-family: "DM Sans", sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at 50% 10%, rgba(37, 99, 235, 0.08) 0%, transparent 60%), var(--bg);
-      line-height: 1.7;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--text-main);
+      background: var(--bg);
+      line-height: 1.5;
       -webkit-font-smoothing: antialiased;
-      padding: 40px 20px;
+      padding: 30px 16px;
     }
 
     img { display: block; max-width: 100%; width: 100%; }
@@ -52,11 +47,10 @@
 
     .card-container {
       width: min(var(--container), 100%);
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 45px 35px;
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 35px 30px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
       text-align: center;
       position: relative;
     }
@@ -65,21 +59,29 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 35px;
-      font-family: "Manrope", sans-serif;
+      margin-bottom: 30px;
       font-weight: 800;
       font-size: 15px;
-      letter-spacing: -0.2px;
-      color: #FFFFFF;
+      color: #000000;
     }
 
-    .top-bar span {
-      color: var(--accent-blue);
+    .top-bar-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-bar-left span {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      background: var(--accent-blue);
+      border-radius: 2px;
     }
 
     .menu-icon {
-      width: 32px;
-      height: 24px;
+      width: 26px;
+      height: 18px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -94,74 +96,70 @@
     }
 
     .avatar-wrapper {
-      width: 140px;
-      height: 140px;
-      margin: 0 auto 24px;
+      width: 130px;
+      height: 130px;
+      margin: 0 auto 20px;
       border-radius: 50%;
-      padding: 4px;
-      background: linear-gradient(135deg, var(--accent-blue), var(--gold));
-      box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+      overflow: hidden;
+      border: 3px solid #FFFFFF;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
     .avatar-wrapper img {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
       object-fit: cover;
     }
 
     h1 {
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(28px, 4vw, 36px);
+      font-size: 26px;
       font-weight: 800;
-      color: #FFFFFF;
-      margin-bottom: 8px;
+      color: #000000;
+      margin-bottom: 6px;
     }
 
     .role-title {
-      font-size: 13.5px;
+      font-size: 12px;
       font-weight: 700;
-      color: var(--gold);
+      color: var(--text-muted);
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
       margin-bottom: 12px;
-      line-height: 1.5;
     }
 
     .location-tag {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: 24px;
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
     }
 
     .blue-divider {
-      width: 60px;
+      width: 70px;
       height: 3px;
       background: var(--accent-blue);
-      margin: 0 auto 30px;
+      margin: 0 auto 28px;
       border-radius: 2px;
     }
 
     .action-buttons {
       display: flex;
-      gap: 14px;
+      gap: 12px;
       justify-content: center;
-      margin-bottom: 35px;
-      flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 50px;
-      padding: 0 24px;
-      border-radius: 25px;
+      min-height: 48px;
+      padding: 0 32px;
+      border-radius: 24px;
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.8px;
       text-transform: uppercase;
-      transition: all 0.3s ease;
+      transition: all 0.2s ease;
       cursor: pointer;
     }
 
@@ -172,55 +170,42 @@
     }
 
     .btn-solid:hover {
-      background: var(--accent-blue-hover);
-      transform: translateY(-2px);
-      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+      background: #0044CC;
     }
 
     .btn-outline {
       background: transparent;
-      color: #FFFFFF;
-      border: 1px solid var(--border);
+      color: #000000;
+      border: 1px solid #000000;
     }
 
     .btn-outline:hover {
-      border-color: var(--accent-blue);
-      background: rgba(37, 99, 235, 0.08);
-      transform: translateY(-2px);
+      background: rgba(0,0,0,0.04);
     }
 
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding-top: 25px;
-      border-top: 1px solid var(--border-light);
+      gap: 22px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border);
     }
 
     .social-icons a {
-      width: 42px;
-      height: 42px;
-      background: var(--surface-card);
-      border: 1px solid var(--border);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #FFFFFF;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 700;
-      transition: all 0.2s ease;
+      color: #000000;
+      transition: color 0.2s ease;
     }
 
     .social-icons a:hover {
-      background: var(--accent-blue);
-      border-color: var(--accent-blue);
+      color: var(--accent-blue);
     }
 
     .tagline-footer {
-      margin-top: 30px;
-      font-size: 13.5px;
-      color: var(--muted);
+      margin-top: 24px;
+      font-size: 12.5px;
+      color: var(--text-muted);
       font-style: italic;
     }
   </style>
@@ -230,7 +215,9 @@
 
   <div class="card-container">
     <div class="top-bar">
-      <div>GIFT EDAFE <span>/ PROFILE</span></div>
+      <div class="top-bar-left">
+        <span></span> Gift Edafe
+      </div>
       <div class="menu-icon" onclick="window.location.href='resume.html'" title="Open Menu">
         <span></span>
         <span></span>
@@ -242,7 +229,7 @@
       <img src="images/pr.jpg" alt="Gift Edafe - Chief Executive Officer" onerror="this.src='images/career-image-1.jpg';">
     </div>
 
-    <h1>GIFT EDAFE</h1>
+    <h1>Gift Edafe</h1>
     <div class="role-title">Chief Executive Officer | Civil Engineer | Surveyor | QA/QC Professional</div>
     <div class="location-tag">Lagos &amp; Abuja, Nigeria | Global Engagement</div>
     
@@ -250,9 +237,7 @@
 
     <div class="action-buttons">
       <a class="btn btn-solid" href="resume.html">RESUME</a>
-      <a class="btn btn-outline" href="resume.html#about">ABOUT</a>
       <a class="btn btn-outline" href="projects.html">PROJECTS</a>
-      <a class="btn btn-outline" href="resume.html#credentials">CREDENTIALS</a>
     </div>
 
     <p class="tagline-footer">Engineering better information for smarter infrastructure &amp; businesses.</p>
