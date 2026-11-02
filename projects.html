@@ -6,34 +6,31 @@
 
   <title>Projects &amp; Network | Gift Edafe</title>
   <meta name="description" content="Selected project experience and professional network of Gift Edafe, CEO of Jiro-BEACONS Engineering Nigeria Limited.">
-  <meta name="theme-color" content="#0B0E14">
+  <meta name="theme-color" content="#F4ECE1">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0B0E14;
-      --surface: #131822;
-      --surface-card: #1A2130;
-      --border: rgba(212, 175, 55, 0.18);
-      --border-light: rgba(255, 255, 255, 0.08);
-      --text: #E2E8F0;
-      --muted: #94A3B8;
-      --gold: #D4AF37;
-      --gold-light: #F3E5AB;
-      --container: 1000px;
+      --bg: #F4ECE1;
+      --card-bg: #FFFFFF;
+      --text-main: #000000;
+      --text-muted: #555555;
+      --accent-blue: #0055FF;
+      --border: #E5D9CB;
+      --container: 900px;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: "DM Sans", sans-serif;
-      color: var(--text);
+      font-family: "Plus Jakarta Sans", sans-serif;
+      color: var(--text-main);
       background: var(--bg);
-      line-height: 1.7;
-      padding: 40px 20px;
+      line-height: 1.6;
+      padding: 30px 16px;
     }
 
     .container {
@@ -45,98 +42,87 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 40px;
-      padding-bottom: 20px;
-      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 30px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
     }
 
     .back-btn {
-      color: var(--gold);
-      font-weight: 700;
+      color: var(--accent-blue);
+      font-weight: 800;
       text-transform: uppercase;
       font-size: 13px;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
     }
 
     .nav-tabs {
       display: flex;
-      gap: 15px;
+      gap: 20px;
       list-style: none;
     }
 
     .nav-tabs a {
-      color: var(--muted);
+      color: var(--text-muted);
       font-size: 12px;
-      font-weight: 700;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 0.8px;
     }
 
     .nav-tabs a:hover, .nav-tabs a.active {
-      color: var(--gold);
+      color: var(--accent-blue);
     }
 
     .section-box {
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--card-bg);
       border-radius: 16px;
-      padding: 45px;
-      margin-bottom: 30px;
+      padding: 40px;
+      margin-bottom: 24px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.04);
     }
 
     h2 {
-      font-family: "Manrope", sans-serif;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 800;
-      color: #FFFFFF;
-      margin-bottom: 24px;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    h2::before {
-      content: "";
-      width: 16px;
-      height: 3px;
-      background: var(--gold);
+      color: #000000;
+      margin-bottom: 20px;
+      letter-spacing: -0.3px;
     }
 
     p {
-      color: var(--muted);
+      color: var(--text-muted);
       margin-bottom: 16px;
-      font-size: 15px;
+      font-size: 14.5px;
     }
 
     .projects-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      gap: 16px;
     }
 
     .project-card {
-      background: var(--surface-card);
-      border: 1px solid var(--border-light);
-      padding: 24px;
-      border-radius: 8px;
+      background: #FAFAFA;
+      border: 1px solid var(--border);
+      padding: 20px;
+      border-radius: 10px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
 
     .project-num {
-      font-family: "Manrope", sans-serif;
       font-size: 12px;
       font-weight: 800;
-      color: var(--gold);
-      margin-bottom: 8px;
+      color: var(--accent-blue);
+      margin-bottom: 6px;
     }
 
     .project-card h3 {
-      font-size: 17px;
-      color: #FFFFFF;
-      margin-bottom: 12px;
-      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+      color: #000000;
+      margin-bottom: 10px;
+      font-weight: 700;
     }
 
     .project-status {
@@ -144,62 +130,67 @@
       margin-top: 10px;
       font-size: 11px;
       font-weight: 700;
-      color: #0B0E14;
-      background: var(--gold);
+      color: #FFFFFF;
+      background: var(--accent-blue);
       padding: 4px 10px;
-      border-radius: 3px;
+      border-radius: 4px;
+      align-self: start;
     }
 
     .network-list {
       list-style: none;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      gap: 12px;
     }
 
     .network-list li {
-      background: var(--surface-card);
-      border: 1px solid var(--border-light);
-      padding: 16px 20px;
-      border-radius: 6px;
-      font-size: 15px;
-      color: #CBD5E1;
+      background: #FAFAFA;
+      border: 1px solid var(--border);
+      padding: 14px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--text-main);
       display: flex;
       align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
+      font-weight: 600;
     }
 
     .network-list li::before {
       content: "—";
-      color: var(--gold);
+      color: var(--accent-blue);
       font-weight: 800;
     }
 
     .connect-box {
-      background: linear-gradient(135deg, #2B0714, #1A040C);
-      border: 1px solid var(--border);
-      padding: 45px;
+      background: #000000;
+      color: #FFFFFF;
+      padding: 40px;
       border-radius: 16px;
+    }
+
+    .connect-box h2 {
+      color: #FFFFFF;
     }
 
     .connect-details {
       display: grid;
       gap: 10px;
-      font-size: 15px;
-      color: #CBD5E1;
-      background: rgba(0, 0, 0, 0.3);
-      padding: 25px;
-      border-radius: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 14.5px;
+      color: #CCCCCC;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 24px;
+      border-radius: 10px;
       margin-top: 20px;
     }
 
     .connect-details strong { color: #FFFFFF; }
-    .connect-details a { color: var(--gold-light); text-decoration: underline; }
+    .connect-details a { color: var(--accent-blue); text-decoration: underline; }
 
     @media(max-width: 991px) {
       .projects-grid, .network-list { grid-template-columns: 1fr; }
-      .section-box, .connect-box { padding: 30px 20px; }
+      .section-box, .connect-box { padding: 25px 20px; }
     }
   </style>
 </head>
@@ -208,7 +199,7 @@
 
   <div class="container">
     <div class="nav-bar">
-      <a class="back-btn" href="index.html">← Back to Profile</a>
+      <a class="back-btn" href="index.html">← Back</a>
       <ul class="nav-tabs">
         <li><a href="resume.html">Resume</a></li>
         <li><a class="active" href="projects.html">Projects</a></li>
@@ -219,7 +210,7 @@
     <div class="section-box">
       <h2>SELECTED PROJECT EXPERIENCE</h2>
       
-      <div class="projects-grid" style="margin-top: 25px;">
+      <div class="projects-grid" style="margin-top: 20px;">
         <div class="project-card">
           <div>
             <div class="project-num">01</div>
@@ -298,7 +289,7 @@
     <!-- PROFESSIONAL NETWORK & COLLABORATION -->
     <div class="section-box">
       <h2>PROFESSIONAL NETWORK &amp; COLLABORATION</h2>
-      <p style="margin-bottom: 20px;">I welcome professional engagement with:</p>
+      <p style="margin-bottom: 16px;">I welcome professional engagement with:</p>
       <ul class="network-list">
         <li>EPC contractors and engineering companies</li>
         <li>Infrastructure developers and project owners</li>
@@ -313,7 +304,7 @@
     <!-- CONNECT -->
     <div class="connect-box">
       <h2>CONNECT</h2>
-      <p style="margin-top: 15px; font-size: 17px; color: #E2E8F0;">
+      <p style="margin-top: 12px; font-size: 15px; color: #DDDDDD;">
         For professional enquiries, engineering collaboration, project opportunities and strategic partnerships, I welcome meaningful engagement.
       </p>
 
