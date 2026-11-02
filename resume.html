@@ -80,7 +80,7 @@
       border: 1px solid var(--border);
       border-radius: 10px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-      width: 220px;
+      width: 230px;
       display: none;
       flex-direction: column;
       text-align: left;
@@ -253,14 +253,28 @@
     }
 
     .footer-social a {
-      font-size: 15px;
-      font-weight: 800;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: #FAFAFA;
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: #000000;
-      transition: color 0.2s;
+      transition: all 0.2s;
     }
 
     .footer-social a:hover {
-      color: var(--accent-blue);
+      background: var(--accent-blue);
+      color: #FFFFFF;
+      border-color: var(--accent-blue);
+    }
+
+    .footer-social svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
     }
 
     .copyright {
@@ -290,13 +304,13 @@
       <div class="dropdown-menu" id="dropdownMenu">
         <a href="#about">About</a>
         <a href="projects.html">Projects</a>
-        <a href="#credentials">Professional Experience</a>
+        <a href="#expertise">Professional Experience</a>
       </div>
     </div>
 
     <!-- ABOUT ME -->
     <div class="section-box" id="about">
-      <h2>Here's who I am &amp; what I do</h2>
+      <h2>Who I Am &amp; What I Do</h2>
       <p>
         I am Gift Edafe, a civil engineer and surveyor with professional experience across engineering, geospatial practice, construction management, quality assurance and integrated project delivery. I serve as Chief Executive Officer of Jiro-BEACONS Engineering Nigeria Limited.
       </p>
@@ -384,7 +398,7 @@
     <footer class="site-footer">
       <div class="footer-col">
         <h3>Call</h3>
-        <p>+234 (0) 800 JIRO-BEACONS</p>
+        <p>+234 903 410 9965</p>
       </div>
       <div class="footer-col">
         <h3>Write</h3>
@@ -394,8 +408,12 @@
         <div>
           <div style="font-family: 'Manrope', sans-serif; font-weight: 800; margin-bottom: 6px;">Follow</div>
           <div class="footer-social">
-            <a href="https://linkedin.com/in/gift-edafe-135235135" target="_blank" rel="noopener">in</a>
-            <a href="https://jirobeacons.com" target="_blank" rel="noopener">JB</a>
+            <a href="https://linkedin.com/in/gift-edafe-135235135" target="_blank" rel="noopener" title="LinkedIn">
+              <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2v-8.37H6.46M7.83 6.42c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63-.73-1.63-1.63-1.63Z"/></svg>
+            </a>
+            <a href="https://jirobeacons.com" target="_blank" rel="noopener" title="Website">
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </a>
           </div>
         </div>
         <div class="copyright">
