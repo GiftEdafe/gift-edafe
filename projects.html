@@ -6,7 +6,7 @@
 
   <title>Projects &amp; Network | Gift Edafe</title>
   <meta name="description" content="Selected project experience and professional network of Gift Edafe, CEO of Jiro-BEACONS Engineering Nigeria Limited.">
-  <meta name="theme-color" content="#FFFFFF">
+  <meta name="theme-color" content="#121212">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,13 +14,13 @@
 
   <style>
     :root {
-      --bg-light: #F8F9FA;
-      --card-bg: #FFFFFF;
-      --text-main: #1A1A1A;
-      --text-muted: #555555;
+      --bg-dark: #121212;
+      --card-bg: #1A1A1A;
+      --text-main: #FFFFFF;
+      --text-muted: #A0A0A0;
       --tef-red: #E31B23;
       --tef-red-hover: #C41219;
-      --border: #E5E7EB;
+      --border: #333333;
       --container: 860px;
     }
 
@@ -29,7 +29,7 @@
 
     body {
       min-height: 100vh;
-      background: var(--bg-light);
+      background: var(--bg-dark);
       color: var(--text-main);
       font-family: 'Plus Jakarta Sans', sans-serif;
       padding: 24px 16px;
@@ -43,7 +43,7 @@
       background: var(--card-bg);
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      box-shadow: 0 25px 50px rgba(0,0,0,0.5);
       border: 1px solid var(--border);
     }
 
@@ -53,7 +53,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 24px 30px;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(26, 26, 26, 0.95);
       backdrop-filter: blur(10px);
       border-bottom: 1px solid var(--border);
       position: sticky;
@@ -74,7 +74,62 @@
     }
 
     .back-btn:hover {
-      color: var(--tef-red);
+      color: var(--text-muted);
+    }
+
+    .menu-icon {
+      width: 28px;
+      height: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .menu-icon span {
+      display: block;
+      height: 2.5px;
+      background: var(--text-main);
+      border-radius: 2px;
+    }
+
+    /* DROPDOWN MENU */
+    .dropdown-menu {
+      position: absolute;
+      top: 75px;
+      right: 25px;
+      background: #222222;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      width: 240px;
+      display: none;
+      flex-direction: column;
+      z-index: 200;
+      overflow: hidden;
+    }
+
+    .dropdown-menu.show {
+      display: flex;
+    }
+
+    .dropdown-menu a {
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-main);
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      transition: background 0.2s, padding-left 0.2s;
+    }
+
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(227, 27, 35, 0.3);
+      padding-left: 24px;
     }
 
     /* CONTENT SECTIONS */
@@ -91,7 +146,6 @@
       font-family: 'Playfair Display', serif;
       font-size: 26px;
       font-weight: 700;
-      color: var(--text-main);
       margin-bottom: 24px;
       display: flex;
       align-items: center;
@@ -120,7 +174,7 @@
     }
 
     .project-card {
-      background: #FAFAFA;
+      background: #222222;
       border: 1px solid var(--border);
       padding: 26px;
       border-radius: 6px;
@@ -138,7 +192,7 @@
     .project-location {
       font-size: 11.5px;
       font-weight: 700;
-      color: var(--tef-red);
+      color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.8px;
       margin-bottom: 6px;
@@ -166,7 +220,7 @@
     }
 
     .network-list li {
-      background: #FAFAFA;
+      background: #222222;
       border: 1px solid var(--border);
       padding: 16px 20px;
       border-radius: 6px;
@@ -194,7 +248,7 @@
       align-items: center;
       padding: 24px 30px;
       border-top: 1px solid var(--border);
-      background: #F1F3F5;
+      background: #161616;
       flex-wrap: wrap;
       gap: 16px;
     }
@@ -223,20 +277,19 @@
       width: 36px;
       height: 36px;
       border-radius: 50%;
-      background: #FFFFFF;
+      background: #222222;
       border: 1px solid var(--border);
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--text-main);
-      transition: background 0.2s, border-color 0.2s, color 0.2s;
+      transition: background 0.2s, border-color 0.2s;
       text-decoration: none;
     }
 
     .social-icon:hover {
-      background: rgba(227, 27, 35, 0.1);
+      background: rgba(227, 27, 35, 0.3);
       border-color: var(--tef-red);
-      color: var(--tef-red);
     }
 
     .social-icon svg {
@@ -269,6 +322,18 @@
     <!-- TOP NAVBAR -->
     <header class="top-header">
       <a class="back-btn" href="index.html">← Back</a>
+      <div class="menu-icon" id="menuToggle" title="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- DROPDOWN MENU -->
+      <nav class="dropdown-menu" id="dropdownMenu">
+        <a href="resume.html#about">Who I Am &amp; What I Do</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html#expertise">Areas of Professional Expertise</a>
+      </nav>
     </header>
 
     <!-- SELECTED PROJECT EXPERIENCE -->
@@ -368,7 +433,16 @@
   </div>
 
   <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('show');
+    });
+    window.addEventListener('click', () => {
+      dropdownMenu.classList.remove('show');
+    });
     document.getElementById('currentYear').textContent = new Date().getFullYear();
   </script>
 </body>
-</html>
+  </html>
