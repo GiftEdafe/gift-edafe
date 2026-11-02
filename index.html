@@ -59,10 +59,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
       font-weight: 800;
       font-size: 15px;
       color: #000000;
+      position: relative;
     }
 
     .top-bar-left {
@@ -95,10 +96,49 @@
       border-radius: 2px;
     }
 
+    /* DROPDOWN MENU */
+    .dropdown-menu {
+      position: absolute;
+      top: 45px;
+      right: 0;
+      background: #FFFFFF;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      width: 210px;
+      display: none;
+      flex-direction: column;
+      text-align: left;
+      z-index: 100;
+      overflow: hidden;
+    }
+
+    .dropdown-menu.show {
+      display: flex;
+    }
+
+    .dropdown-menu a {
+      padding: 12px 18px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #000000;
+      border-bottom: 1px solid #F0F0F0;
+      transition: background 0.2s;
+    }
+
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-menu a:hover {
+      background: rgba(0, 85, 255, 0.08);
+      color: var(--accent-blue);
+    }
+
     .avatar-wrapper {
-      width: 130px;
-      height: 130px;
-      margin: 0 auto 20px;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 16px;
       border-radius: 50%;
       overflow: hidden;
       border: 3px solid #FFFFFF;
@@ -112,50 +152,67 @@
     }
 
     h1 {
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 800;
       color: #000000;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
     }
 
     .role-title {
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 700;
       color: var(--text-muted);
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
     }
 
     .location-tag {
-      font-size: 13px;
+      font-size: 12.5px;
       color: var(--text-muted);
-      margin-bottom: 22px;
+      margin-bottom: 18px;
     }
 
     .blue-divider {
-      width: 70px;
+      width: 60px;
       height: 3px;
       background: var(--accent-blue);
-      margin: 0 auto 28px;
+      margin: 0 auto 20px;
       border-radius: 2px;
+    }
+
+    .hello-note {
+      font-size: 15px;
+      font-weight: 700;
+      color: #000000;
+      margin-bottom: 6px;
+      text-align: left;
+    }
+
+    .intro-note {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-bottom: 22px;
+      text-align: left;
+      line-height: 1.6;
     }
 
     .action-buttons {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       justify-content: center;
-      margin-bottom: 30px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 48px;
-      padding: 0 32px;
-      border-radius: 24px;
-      font-size: 13px;
+      min-height: 44px;
+      padding: 0 20px;
+      border-radius: 22px;
+      font-size: 12px;
       font-weight: 800;
       letter-spacing: 0.8px;
       text-transform: uppercase;
@@ -186,14 +243,14 @@
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 20px;
-      padding-top: 22px;
+      gap: 18px;
+      padding-top: 18px;
       border-top: 1px solid var(--border);
     }
 
     .social-icons a {
-      width: 38px;
-      height: 38px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       background: #FAFAFA;
       border: 1px solid var(--border);
@@ -211,16 +268,114 @@
     }
 
     .social-icons svg {
-      width: 18px;
-      height: 18px;
+      width: 16px;
+      height: 16px;
       fill: currentColor;
     }
 
     .tagline-footer {
-      margin-top: 24px;
-      font-size: 12.5px;
+      margin-top: 20px;
+      font-size: 12px;
       color: var(--text-muted);
       font-style: italic;
+    }
+
+    /* MODAL POPUP FORM */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #FFFFFF;
+      border-radius: 16px;
+      padding: 30px;
+      width: 100%;
+      max-width: 440px;
+      text-align: left;
+      position: relative;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    }
+
+    .modal-box h3 {
+      font-size: 20px;
+      font-weight: 800;
+      color: #000000;
+      margin-bottom: 16px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 22px;
+      font-weight: 800;
+      cursor: pointer;
+      color: #555555;
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: #333333;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      background: #FAFAFA;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--accent-blue);
+      background: #FFFFFF;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      height: 90px;
+    }
+
+    .btn-send {
+      width: 100%;
+      margin-top: 10px;
+      background: var(--accent-blue);
+      color: #FFFFFF;
+      border: none;
+      border-radius: 8px;
+      padding: 12px;
+      font-weight: 800;
+      font-size: 13px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .btn-send:hover {
+      background: #0044CC;
     }
   </style>
 </head>
@@ -232,10 +387,17 @@
       <div class="top-bar-left">
         <span></span> Gift Edafe
       </div>
-      <div class="menu-icon" onclick="window.location.href='resume.html'" title="Open Menu">
+      <div class="menu-icon" id="menuToggle" title="Open Menu">
         <span></span>
         <span></span>
         <span></span>
+      </div>
+
+      <!-- DROPDOWN MENU -->
+      <div class="dropdown-menu" id="dropdownMenu">
+        <a href="resume.html#about">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="resume.html#credentials">Professional Experience</a>
       </div>
     </div>
 
@@ -249,28 +411,88 @@
     
     <div class="blue-divider"></div>
 
+    <div class="hello-note">Hello</div>
+    <div class="intro-note">
+      I am Gift Edafe, a civil engineer and surveyor leading Jiro-BEACONS Engineering Nigeria Limited with a vision for advanced infrastructure delivery, robust QA/QC compliance, and intelligent Digital Engineering Packages.
+    </div>
+
     <div class="action-buttons">
-      <a class="btn btn-solid" href="resume.html">RESUME</a>
-      <a class="btn btn-outline" href="projects.html">PROJECTS</a>
+      <a class="btn btn-solid" href="resume.html#credentials">View My Work</a>
+      <a class="btn btn-outline" href="#" id="openModal">Work With Me</a>
     </div>
 
     <p class="tagline-footer">Engineering better information for smarter infrastructure &amp; businesses.</p>
 
     <div class="social-icons">
-      <!-- Website Icon -->
       <a href="https://jirobeacons.com" target="_blank" rel="noopener" title="Jiro-BEACONS Website">
         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
       </a>
-      <!-- LinkedIn Icon -->
       <a href="https://linkedin.com/in/gift-edafe-135235135" target="_blank" rel="noopener" title="LinkedIn Profile">
         <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2v-8.37H6.46M7.83 6.42c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63-.73-1.63-1.63-1.63Z"/></svg>
       </a>
-      <!-- Email Icon -->
       <a href="mailto:giftedafe@jirobeacons.com" title="Professional Email">
         <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
       </a>
     </div>
   </div>
+
+  <!-- GET IN TOUCH MODAL FORM -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal-box">
+      <button class="close-modal" id="closeModal">&times;</button>
+      <h3>Get in Touch</h3>
+      <form action="mailto:giftedafe@jirobeacons.com" method="POST" enctype="text/plain">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn-send">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // Dropdown toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('show');
+    });
+    window.addEventListener('click', () => {
+      dropdownMenu.classList.remove('show');
+    });
+
+    // Modal popup toggle
+    const openModal = document.getElementById('openModal');
+    const closeModal = document.getElementById('closeModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+
+    openModal.addEventListener('click', (e) => {
+      e.preventDefault();
+      modalOverlay.classList.add('open');
+    });
+    closeModal.addEventListener('click', () => {
+      modalOverlay.classList.remove('open');
+    });
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) {
+        modalOverlay.classList.remove('open');
+      }
+    });
+  </script>
 
 </body>
 </html>
