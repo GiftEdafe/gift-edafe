@@ -18,8 +18,8 @@
       --card-bg: #1A1A1A;
       --text-main: #FFFFFF;
       --text-muted: #A0A0A0;
-      --wine: #2B0714;
-      --wine-border: #4A1225;
+      --tef-red: #E31B23;
+      --tef-red-hover: #C41219;
       --border: #333333;
       --container: 480px;
     }
@@ -65,15 +65,14 @@
       background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(18,18,18,0.2) 35%, rgba(18,18,18,0.96) 88%), url('images/pr.jpg') center/cover no-repeat;
     }
 
-    /* FLOATING HEADER MATCHING REFERENCE CURVATURE */
+    /* FLOATING HEADER WITH MINIMAL RECTANGULAR CURVATURE */
     .top-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 14px 22px;
-      background: var(--wine);
-      border: 1px solid var(--wine-border);
-      border-radius: 16px;
+      background: var(--tef-red);
+      border-radius: 6px;
       position: relative;
       z-index: 100;
       box-shadow: 0 10px 25px rgba(0,0,0,0.35);
@@ -93,7 +92,7 @@
     .brand-dot {
       width: 8px;
       height: 8px;
-      background: #F3E5AB;
+      background: #FFFFFF;
       border-radius: 50%;
     }
 
@@ -120,7 +119,7 @@
       right: 16px;
       background: #222222;
       border: 1px solid var(--border);
-      border-radius: 12px;
+      border-radius: 6px;
       box-shadow: 0 15px 35px rgba(0,0,0,0.4);
       width: 240px;
       display: none;
@@ -148,7 +147,7 @@
     }
 
     .dropdown-menu a:hover {
-      background: var(--wine-border);
+      background: rgba(227, 27, 35, 0.3);
       padding-left: 24px;
     }
 
@@ -184,20 +183,19 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      background: var(--wine);
-      border: 1px solid var(--wine-border);
+      background: var(--tef-red);
       color: #FFFFFF;
       font-weight: 700;
       font-size: 14px;
       padding: 16px;
-      border-radius: 12px;
+      border-radius: 6px;
       text-decoration: none;
       transition: background 0.2s, transform 0.2s;
       box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
 
     .hero-btn:hover {
-      background: #4A1225;
+      background: var(--tef-red-hover);
     }
 
     /* BODY DETAILS */
@@ -221,7 +219,7 @@
       content: "";
       width: 5px;
       height: 20px;
-      background: var(--wine);
+      background: var(--tef-red);
       border-radius: 3px;
     }
 
@@ -247,7 +245,7 @@
       font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 0.8px;
-      border-radius: 10px;
+      border-radius: 6px;
       text-align: center;
       cursor: pointer;
       text-decoration: none;
@@ -255,8 +253,8 @@
     }
 
     .btn-outline:hover {
-      border-color: var(--wine);
-      background: rgba(43, 7, 20, 0.2);
+      border-color: var(--tef-red);
+      background: rgba(227, 27, 35, 0.15);
     }
 
     /* FOOTER */
@@ -295,8 +293,8 @@
     }
 
     .social-icon:hover {
-      background: var(--wine-border);
-      border-color: var(--wine);
+      background: rgba(227, 27, 35, 0.3);
+      border-color: var(--tef-red);
     }
 
     .social-icon svg {
@@ -325,8 +323,8 @@
     .modal-box {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-top: 4px solid var(--wine);
-      border-radius: 20px;
+      border-top: 4px solid var(--tef-red);
+      border-radius: 12px;
       padding: 30px;
       width: 100%;
       max-width: 420px;
@@ -370,7 +368,7 @@
       padding: 11px 14px;
       background: #222222;
       border: 1px solid var(--border);
-      border-radius: 10px;
+      border-radius: 6px;
       color: var(--text-main);
       font-family: inherit;
       font-size: 14px;
@@ -378,7 +376,7 @@
     }
 
     .form-group input:focus, .form-group textarea:focus {
-      border-color: var(--wine);
+      border-color: var(--tef-red);
     }
 
     .form-group textarea {
@@ -388,10 +386,10 @@
 
     .btn-send {
       width: 100%;
-      background: var(--wine);
+      background: var(--tef-red);
       color: #FFFFFF;
       border: none;
-      border-radius: 10px;
+      border-radius: 6px;
       padding: 13px;
       font-weight: 700;
       font-size: 13px;
@@ -399,6 +397,10 @@
       letter-spacing: 1px;
       cursor: pointer;
       margin-top: 8px;
+    }
+
+    .btn-send:hover {
+      background: var(--tef-red-hover);
     }
 
     .success-msg {
