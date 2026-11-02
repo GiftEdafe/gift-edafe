@@ -3,605 +3,237 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gift Edafe | President & Principal Consultant</title>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>Gift Edafe | Chief Executive Officer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #2B0714;
-            --accent: #D4AF37;
-            --text-main: #1A1A1A;
-            --text-muted: #555555;
-            --bg-light: #FFFFFF;
-            --bg-alt: #F7F5F3;
-            --border-color: #E2DBD5;
+            --bg-color: #0b0c10;
+            --card-bg: #12141a;
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            --accent-gold: #d4af37;
+            --border-color: rgba(212, 175, 55, 0.25);
         }
 
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            font-family: 'DM Sans', sans-serif, -apple-system, BlinkMacSystemFont;
+            background-color: var(--bg-color);
             color: var(--text-main);
-            background-color: var(--bg-light);
             line-height: 1.5;
-            -webkit-font-smoothing: antialiased;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px 10px;
         }
 
-        h1, h2, h3, h4, .brand-title {
-            font-family: 'Manrope', sans-serif;
-        }
-
-        /* Compact Sticky Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .container {
             width: 100%;
-            background: rgba(255, 255, 255, 0.96);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-            z-index: 1000;
+            max-width: 680px;
         }
 
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0.8rem 1.5rem;
+        header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .logo {
-            font-size: 0.95rem;
-            font-weight: 800;
-            color: var(--primary);
-            letter-spacing: 1px;
-            text-decoration: none;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-muted);
-            font-size: 0.85rem;
-            font-weight: 600;
-            transition: color 0.2s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 7rem 1.5rem 4rem;
-            background: linear-gradient(135deg, var(--bg-alt) 0%, var(--bg-light) 100%);
+            margin-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
         }
 
-        .hero-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 2.5rem;
-            align-items: center;
+        .brand-logo-img {
+            height: 36px;
+            width: auto;
+            border-radius: 4px;
+            object-fit: contain;
         }
 
-        .hero-badge {
-            display: inline-block;
+        .location-tag {
             font-size: 0.7rem;
-            font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--accent);
-            margin-bottom: 0.75rem;
+            letter-spacing: 1.2px;
+            color: var(--accent-gold);
+            font-weight: 600;
         }
 
-        .hero h1 {
-            font-size: 2.6rem;
-            color: var(--primary);
-            line-height: 1.1;
-            margin-bottom: 0.4rem;
+        .hero-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            color: var(--text-main);
         }
 
         .hero-subtitle {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
+            font-size: 1rem;
+            color: var(--accent-gold);
+            font-weight: 500;
+            margin-bottom: 12px;
         }
 
-        .hero-description {
-            font-size: 0.95rem;
+        .hero-desc {
             color: var(--text-muted);
-            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
 
-        .hero-cta {
+        .btn-group {
             display: flex;
-            gap: 0.75rem;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            padding: 0.65rem 1.25rem;
+            background-color: transparent;
+            color: var(--text-main);
+            border: 1px solid var(--accent-gold);
+            padding: 8px 16px;
+            border-radius: 6px;
             font-size: 0.85rem;
             font-weight: 600;
-            border-radius: 4px;
             text-decoration: none;
             transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
         .btn-primary {
-            background-color: var(--primary);
-            color: white;
+            background-color: var(--accent-gold);
+            color: #000;
         }
 
-        .btn-primary:hover {
-            background-color: #430b1e;
+        .btn:hover {
+            background-color: var(--accent-gold);
+            color: #000;
         }
 
-        .btn-outline {
-            border: 2px solid var(--primary);
-            color: var(--primary);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background-color: var(--primary);
-            color: white;
-        }
-
-        /* Hero Portrait Frame */
-        .hero-visual-card {
-            width: 100%;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(43, 7, 20, 0.12);
-            border: 1px solid var(--accent);
-            background: var(--primary);
-        }
-
-        .hero-visual-card img {
-            width: 100%;
-            height: 340px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Sections */
-        section {
-            padding: 4rem 1.5rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            margin-bottom: 2.2rem;
-        }
-
-        .section-header span {
-            font-size: 0.7rem;
+        .section-title {
+            font-size: 1.05rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--accent);
-            display: block;
-            margin-bottom: 0.3rem;
+            margin: 25px 0 12px 0;
+            color: var(--text-main);
+            letter-spacing: 0.5px;
         }
 
-        .section-header h2 {
-            font-size: 2rem;
-            color: var(--primary);
-        }
-
-        /* About Grid with Site PPE Photo */
-        .intro-grid {
+        .projects-grid {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 2.5rem;
-            align-items: center;
+            grid-template-columns: 1fr;
+            gap: 12px;
         }
 
-        .intro-text p {
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255,255,255,0.04);
+            border-left: 3px solid var(--accent-gold);
+            padding: 14px 16px;
+            border-radius: 6px;
+            transition: transform 0.15s ease;
+        }
+
+        .project-card:hover {
+            transform: translateX(2px);
+            border-color: var(--border-color);
+        }
+
+        .project-name {
             font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: var(--text-main);
         }
 
-        .about-image-card {
-            border-radius: 6px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-            border: 1px solid var(--border-color);
+        .project-meta {
+            font-size: 0.75rem;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 4px;
         }
 
-        .about-image-card img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            display: block;
-        }
-
-        /* Expertise Grid with Image Thumbnails */
-        .expertise-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .expertise-card {
-            background: var(--bg-alt);
-            border-radius: 6px;
-            overflow: hidden;
-            border: 1px solid var(--border-color);
-            transition: border-color 0.2s ease;
-        }
-
-        .expertise-card:hover {
-            border-color: var(--accent);
-        }
-
-        .expertise-card img {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .expertise-content {
-            padding: 1.5rem;
-        }
-
-        .expertise-card h3 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 0.4rem;
-        }
-
-        .expertise-card p {
+        .project-desc {
             font-size: 0.85rem;
             color: var(--text-muted);
         }
 
-        /* Leadership Banner */
-        .leadership-banner {
-            background-color: var(--primary);
-            color: white;
-            border-radius: 8px;
-            padding: 3rem;
-            display: grid;
-            grid-template-columns: 1.3fr 0.9fr;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .leadership-banner h2 {
-            color: white;
-            font-size: 1.8rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .leadership-banner p {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            margin-bottom: 1.5rem;
-        }
-
-        .company-stat-card {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            padding: 1.5rem;
-            border-radius: 6px;
-        }
-
-        .company-stat-card h4 {
-            color: var(--accent);
-            font-size: 0.95rem;
-            margin-bottom: 0.4rem;
-        }
-
-        .company-stat-card p {
-            font-size: 0.8rem;
-            margin-bottom: 0;
-            opacity: 0.8;
-        }
-
-        /* Credentials & Projects Layout */
-        .credentials-layout {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2.5rem;
-        }
-
-        .credential-group h3 {
-            font-size: 1.1rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            padding-bottom: 0.4rem;
-            border-bottom: 2px solid var(--accent);
-        }
-
-        .credential-list {
-            list-style: none;
-        }
-
-        .credential-list li {
-            padding: 0.6rem 0;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .credential-list li::before {
-            content: "•";
-            color: var(--accent);
-            font-size: 1.2rem;
-            line-height: 0;
-        }
-
-        /* Connect Section */
-        .connect-section {
-            background-color: var(--bg-alt);
-            text-align: center;
-            padding: 4rem 1.5rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .connect-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .connect-container h2 {
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 0.75rem;
-        }
-
-        .connect-container p {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin-bottom: 1.75rem;
-        }
-
-        .connect-actions {
-            display: flex;
-            justify-content: center;
-            gap: 0.75rem;
-            flex-wrap: wrap;
-        }
-
-        /* Footer */
         footer {
-            background-color: var(--primary);
-            color: white;
             text-align: center;
-            padding: 2rem 1.5rem;
-            border-top: 2px solid var(--accent);
-        }
-
-        footer p {
-            font-size: 0.8rem;
-            opacity: 0.8;
-            margin-bottom: 0.25rem;
-        }
-
-        footer .footer-title {
-            font-weight: 700;
-            color: var(--accent);
-            font-size: 0.9rem;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 850px) {
-            .hero-container, .intro-grid, .leadership-banner, .credentials-layout {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .nav-links {
-                display: none;
-            }
+            margin-top: 35px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.75rem;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">GIFT EDAFE</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#leadership">Leadership</a></li>
-                <li><a href="#credentials">Credentials</a></li>
-                <li><a href="#connect">Contact</a></li>
-            </ul>
-        </div>
-    </header>
+    <div class="container">
+        <header>
+            <a href="#"><img src="pr.jpg" alt="Gift Edafe Logo" class="brand-logo-img"></a>
+            <div class="location-tag">Lagos | Abuja | Nigeria | Global</div>
+        </header>
 
-    <!-- Section 01 — Executive Hero -->
-    <section class="hero">
-        <div class="hero-container">
-            <div>
-                <span class="hero-badge">Lagos | Abuja | Nigeria | Global</span>
-                <h1>Gift Edafe</h1>
-                <div class="hero-subtitle">President | Principal Consultant</div>
-                <p class="hero-description">
-                    Engineering professional advancing integrated infrastructure delivery, comprehensive quality assurance, and intelligent digital asset information.
-                </p>
-                <div class="hero-cta">
-                    <a href="https://jirobeacons.com" target="_blank" class="btn btn-primary">Explore Jiro-BEACONS →</a>
-                    <a href="#connect" class="btn btn-outline">Connect Professionally</a>
-                </div>
-            </div>
-            <div>
-                <div class="hero-visual-card">
-                    <img src="images/pr.jpg" alt="Gift Edafe - President and Principal Consultant">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 02 — Professional Introduction -->
-    <section id="about">
-        <div class="section-header">
-            <span>Professional Philosophy</span>
-            <h2>Engineering Beyond the Physical Asset</h2>
-        </div>
-        <div class="intro-grid">
-            <div class="intro-text">
-                <p>
-                    I am an engineering professional and consultant with multidisciplinary experience across civil engineering, surveying and geospatial practice, construction quality assurance, technical project delivery and engineering information management.
-                </p>
-                <p>
-                    My professional interests focus on improving how infrastructure is surveyed, engineered, constructed, verified, documented and ultimately managed.
-                </p>
-                <div style="margin-top: 1.5rem; background-color: var(--bg-alt); padding: 1.25rem; border-left: 3px solid var(--accent); border-radius: 0 6px 6px 0;">
-                    <h3 style="color: var(--primary); font-size: 1rem; margin-bottom: 0.3rem;">The Jiro-BEACONS Standard</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0;">Connecting physical project execution with structured, accessible and intelligent digital asset information.</p>
-                </div>
-            </div>
-            <div>
-                <div class="about-image-card">
-                    <img src="images/about.jpg" alt="Gift Edafe on site in PPE">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 03 — Professional Expertise -->
-    <section id="expertise" style="background-color: var(--bg-alt); max-width: 100%;">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <div class="section-header">
-                <span>Capabilities</span>
-                <h2>Areas of Professional Focus</h2>
-            </div>
-            <div class="expertise-grid">
-                <div class="expertise-card">
-                    <img src="images/cn.jpg" alt="Building Construction Site">
-                    <div class="expertise-content">
-                        <h3>Engineering & Infrastructure</h3>
-                        <p>Civil engineering, technical coordination and infrastructure delivery across complex sites.</p>
-                    </div>
-                </div>
-                <div class="expertise-card">
-                    <img src="images/bm.jpg" alt="Scan to BIM">
-                    <div class="expertise-content">
-                        <h3>Digital Engineering & BIM</h3>
-                        <p>Scan-to-BIM modeling, digital as-builts and digital twin asset information development.</p>
-                    </div>
-                </div>
-                <div class="expertise-card">
-                    <img src="images/bs.jpg" alt="BESS Site">
-                    <div class="expertise-content">
-                        <h3>QA/QC & Technical Assurance</h3>
-                        <p>Inspection, testing, quality systems, and compliance oversight on energy and BESS sites.</p>
-                    </div>
-                </div>
-                <div class="expertise-card">
-                    <img src="images/st.jpg" alt="Plant & Machinery Site">
-                    <div class="expertise-content">
-                        <h3>Construction & Plant Operations</h3>
-                        <p>Site coordination, heavy plant management, support, and delivery execution.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 04 — Leadership and Company -->
-    <section id="leadership">
-        <div class="leadership-banner">
-            <div>
-                <span>Corporate Leadership</span>
-                <h2>Building Through Jiro-BEACONS</h2>
-                <p>
-                    As President and Principal Consultant of Jiro-BEACONS Engineering Nigeria Limited, I provide leadership for an integrated engineering business combining multidisciplinary AEC capabilities with digital engineering intelligence.
-                </p>
-                <a href="https://jirobeacons.com" target="_blank" class="btn" style="background-color: var(--accent); color: var(--primary); font-weight: 700;">Visit Jiro-BEACONS Engineering →</a>
-            </div>
-            <div>
-                <div class="company-stat-card">
-                    <h4>Our Signature Delivery Philosophy</h4>
-                    <p><strong>Physical Infrastructure + Digital Engineering Package</strong></p>
-                    <p style="margin-top: 0.5rem;">Engineering delivery supported by structured quality records, geospatial information, digital as-builts, and intelligent asset data.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 05 & 06 — Project Experience & Credentials -->
-    <section id="credentials" style="background-color: var(--bg-alt); max-width: 100%;">
-        <div style="max-width: 1000px; margin: 0 auto;">
-            <div class="section-header">
-                <span>Track Record & Background</span>
-                <h2>Experience & Qualifications</h2>
-            </div>
-            <div class="credentials-layout">
-                <div class="credential-group">
-                    <h3>Selected Project Experience</h3>
-                    <ul class="credential-list">
-                        <li>132/33kV Substation Expansion — Digital Handover</li>
-                        <li>Abuja-FCT Estate — Digital As-Built & Test Documentation</li>
-                        <li>Real Estate & Infrastructure Projects — Engineering information, QA/QC and digital delivery support</li>
-                    </ul>
-                </div>
-                <div class="credential-group">
-                    <h3>Education & Registrations</h3>
-                    <ul class="credential-list">
-                        <li>M.Eng. & B.Eng. Civil Engineering</li>
-                        <li>HND / OND Surveying & Geoinformatics</li>
-                        <li>ISO 9001:2015 Quality Management Systems</li>
-                        <li>ASNT NDT Level II — UT, MPT and RFI</li>
-                        <li>COREN and SURCON professional registrations</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 07 — Professional Connections -->
-    <section id="connect" class="connect-section" style="max-width: 100%;">
-        <div class="connect-container">
-            <span>Get in Touch</span>
-            <h2>Let's Connect</h2>
-            <p>
-                I welcome conversations with engineering leaders, EPC contractors, infrastructure developers, asset owners, professional consultants, and organisations interested in better infrastructure delivery and digital transformation.
+        <section class="hero-section">
+            <h1 class="hero-title">Gift Edafe</h1>
+            <div class="hero-subtitle">Chief Executive Officer</div>
+            <p class="hero-desc">
+                Executive engineering leader driving integrated infrastructure delivery, high-rise construction, real estate asset optimization, rigorous quality assurance, and intelligent digital systems.
             </p>
-            <div class="connect-actions">
-                <a href="https://linkedin.com" target="_blank" class="btn btn-primary">LinkedIn Profile</a>
-                <a href="https://jirobeacons.com" target="_blank" class="btn btn-outline">Jiro-BEACONS Website</a>
+            <div class="btn-group">
+                <a href="https://jirobeacons.com" target="_blank" class="btn btn-primary">Explore Jiro-BEACONS →</a>
+                <a href="mailto:contact@giftedafe.com" class="btn">Connect Professionally</a>
+            </div>
+        </section>
+
+        <h2 class="section-title">Real Estate & Major Infrastructure Portfolios</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-meta">Real Estate & High-Rise Development</div>
+                <div class="project-name">Real Estate Asset Development & Corporate Infrastructure</div>
+                <div class="project-desc">Strategic direction and execution of commercial property developments, high-rise construction, and integrated property asset solutions across key regional hubs.</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-meta">Pipeline Infrastructure & QA/QC Compliance</div>
+                <div class="project-name">AKK 40-Inch Natural Gas Pipeline Project</div>
+                <div class="project-desc">Independent quality assurance, material verification, and regulatory inspection oversight for critical national energy infrastructure.</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-meta">Pipeline Infrastructure & QA/QC Compliance</div>
+                <div class="project-name">Abuja Water Pipeline Project – CGC Nigeria Limited (CGCNL)</div>
+                <div class="project-desc">Rigorous quality control protocols, weld inspection tracking, and hydro-testing compliance for municipal utility distribution networks.</div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-meta">Surveying, Geospatial & QA/QC Compliance</div>
+                <div class="project-name">Gilmor Goronyo Dam Project</div>
+                <div class="project-desc">High-precision topographical surveys, geospatial data integration, and structural stability monitoring for major water resource assets.</div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-title">Gift Edafe</div>
-        <p>President | Principal Consultant — Jiro-BEACONS Engineering Nigeria Limited</p>
-        <p>Lagos | Abuja | Nigeria | Global</p>
-        <p style="margin-top: 0.75rem; font-size: 0.75rem; opacity: 0.6;">© 2026 Gift Edafe. All rights reserved.</p>
-    </footer>
+        <footer>
+            &copy; 2026 Gift Edafe. All Rights Reserved. Global Infrastructure & Real Estate Advisory.
+        </footer>
+    </div>
 
 </body>
 </html>
